@@ -2,11 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DashboardLayout from '@/components/DashboardLayout.vue'
 import Notes from '@/app/dashboard/Notes.vue'
 import DashboardPage from '@/app/dashboard/DashboardPage.vue'
-import Page from "@/components/home/Page.vue";
+import Page from "@/app/home/Page.vue";
 import Login from "@/app/auth/Login.vue";
 import Register from "@/app/auth/Register.vue";
 import ResumeAuditPage from "@/app/auth/ResumeAuditPage.vue";
 import Onboarding from "@/app/auth/Onboarding.vue";
+import SkillTest from "@/app/auth/SkillTest.vue";
+import EmailVerify from "@/app/auth/EmailVerify.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -31,6 +33,17 @@ const router = createRouter({
             name: 'audit',
             component: ResumeAuditPage,
             meta: { requiresAuth: true, headerBack: true },
+        },
+        {
+            path: '/skill-test',
+            name: 'skillTest',
+            component: SkillTest,
+            meta: { requiresAuth: true, headerBack: true },
+        },
+        {
+            path: '/email-verify',
+            name: 'emailVerify',
+            component: EmailVerify,
         },
         {
             path: '/onboarding',

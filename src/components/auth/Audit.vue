@@ -224,12 +224,8 @@ const actionItems = ref([
 const navigateToSkillTest = () => {
   emit('navigate', '/skill-test');
 
-  // Vue Router bilan ishlatish uchun:
-  // import { useRouter } from 'vue-router'
-  // const router = useRouter()
-  // router.push('/skill-test')
+  window.location.href = '/skill-test';
 
-  console.log('Navigating to skill test page');
 };
 </script>
 

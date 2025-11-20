@@ -17,8 +17,8 @@
             <a href="#how-it-works" class="text-gray-600 hover:text-gray-900">How it works</a>
           </nav>
           <div class="flex items-center gap-3">
-            <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Login</button>
-            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Start Free Trial</button>
+            <a href="/login" class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Login</a>
+            <a href="/register" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Start Free Trial</a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 md:p-8">
+  <div class="p-4 md:p-8 bg-white">
     <!-- Header -->
     <div class="mb-6 md:mb-8">
       <h1 class="text-2xl md:text-3xl mb-2">Skill Test</h1>

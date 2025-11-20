@@ -195,7 +195,7 @@ const handleSubmit = () => {
     password: '***' // Password'ni log qilmaslik yaxshiroq
   });
 
-  window.location.href = '/onboarding';
+  window.location.href = '/email-verify';
 };
 
 const handleGoogleSignup = () => {

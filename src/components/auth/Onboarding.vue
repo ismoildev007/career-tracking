@@ -6,16 +6,16 @@
         <span class="text-xl">CareerTrack</span>
       </div>
 
-      <!-- Progress Indicator -->
-      <div class="mb-8">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-sm text-gray-600">Qadam 1/3</span>
-          <span class="text-sm text-gray-600">33%</span>
-        </div>
-        <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-full bg-blue-600 rounded-full" style="width: 33%"></div>
-        </div>
-      </div>
+<!--      &lt;!&ndash; Progress Indicator &ndash;&gt;-->
+<!--      <div class="mb-8">-->
+<!--        <div class="flex items-center justify-between mb-2">-->
+<!--          <span class="text-sm text-gray-600">Qadam 1/3</span>-->
+<!--          <span class="text-sm text-gray-600">33%</span>-->
+<!--        </div>-->
+<!--        <div class="h-2 bg-gray-200 rounded-full overflow-hidden">-->
+<!--          <div class="h-full bg-blue-600 rounded-full" style="width: 33%"></div>-->
+<!--        </div>-->
+<!--      </div>-->
 
       <h1 class="text-3xl mb-2">Profil ma'lumotlari</h1>
       <p class="text-gray-600 mb-8">

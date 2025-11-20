@@ -180,6 +180,8 @@ const handleSubmit = () => {
   // const router = useRouter()
   // router.push('/dashboard')
 
+  window.location.href = '/dashboard';
+
   console.log('Login submitted:', {
     email: email.value,
     password: password.value,
