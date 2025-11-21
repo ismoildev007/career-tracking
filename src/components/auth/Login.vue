@@ -180,6 +180,8 @@ const handleSubmit = () => {
   // const router = useRouter()
   // router.push('/dashboard')
 
+  localStorage.setItem('token', 1234567);
+
   window.location.href = '/dashboard';
 
   console.log('Login submitted:', {

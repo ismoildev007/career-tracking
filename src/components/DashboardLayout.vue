@@ -155,6 +155,7 @@
                   </div>
                   <div class="border-t">
                     <button
+                        @click="logout"
                         class="w-full flex items-center px-3 py-2 text-sm text-red-600 hover:bg-red-50"
                     >
                       <LogOut class="w-4 h-4 mr-2" />
@@ -178,7 +179,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRoute, RouterLink, RouterView } from 'vue-router';
+import { useRoute, RouterLink, RouterView, useRouter } from 'vue-router';
+import axios from 'axios';
 import {
   TrendingUp,
   LayoutDashboard,
@@ -195,6 +197,7 @@ import {
 } from 'lucide-vue-next';
 
 const route = useRoute();
+const router = useRouter()
 
 const sidebarOpen = ref(false);
 const userMenuOpen = ref(false);
@@ -208,4 +211,9 @@ const menuItems = [
   { icon: Bell, label: 'Bildirishnomalar', path: '/dashboard/notifications' },
   { icon: User, label: 'Profile', path: '/dashboard/profile' },
 ];
+
+async function logout() {
+  localStorage.clear()
+  router.push({ name: 'login' })
+}
 </script>

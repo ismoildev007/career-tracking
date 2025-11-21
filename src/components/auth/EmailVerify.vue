@@ -146,6 +146,7 @@ const handleSubmit = () => {
   // Vue Router bilan ishlatish uchun:
   // import { useRouter } from 'vue-router'
   // const router = useRouter()
+  localStorage.setItem('token', 1234567)
   window.location.href = '/onboarding';
 
   console.log('Verification code submitted:', fullCode.value);

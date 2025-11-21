@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DashboardLayout from '@/components/DashboardLayout.vue'
-import Notes from '@/app/dashboard/Notes.vue'
 import DashboardPage from '@/app/dashboard/DashboardPage.vue'
 import Page from "@/app/home/Page.vue";
 import Login from "@/app/auth/Login.vue";
@@ -22,11 +21,24 @@ const router = createRouter({
             path: '/login',
             name: 'login',
             component: Login,
+            meta: { guest: true }
         },
         {
             path: '/register',
             name: 'register',
             component: Register,
+            meta: { guest: true }
+        },
+        {
+            path: '/email-verify',
+            name: 'emailVerify',
+            component: EmailVerify,
+        },
+        {
+            path: '/onboarding',
+            name: 'onboarding',
+            component: Onboarding,
+            meta: { requiresAuth: true, headerBack: true },
         },
         {
             path: '/resume-audit',
@@ -38,17 +50,6 @@ const router = createRouter({
             path: '/skill-test',
             name: 'skillTest',
             component: SkillTest,
-            meta: { requiresAuth: true, headerBack: true },
-        },
-        {
-            path: '/email-verify',
-            name: 'emailVerify',
-            component: EmailVerify,
-        },
-        {
-            path: '/onboarding',
-            name: 'onboarding',
-            component: Onboarding,
             meta: { requiresAuth: true, headerBack: true },
         },
         {
@@ -84,6 +85,7 @@ const router = createRouter({
                 },
                 {
                     path: 'profile',
+                    name: 'profile',
                     component: () => import('@/app/dashboard/Profile.vue')
                 },
             ]
@@ -99,7 +101,7 @@ router.beforeEach((to, from, next) => {
     }
 
     if (to.meta.guest && token) {
-        return next({ name: "dashboard" });
+        return next({ name: "profile" });
     }
 
     next();
